@@ -78,3 +78,65 @@ body, html {
     text-shadow: 0 0 5px rgba(0, 210, 255, 0.5);
     user-select: none;
 }
+
+/* Window Styles */
+.window {
+    position: absolute;
+    width: 320px;
+    height: 220px;
+    background: rgba(10, 10, 30, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+}
+
+.window-header {
+    background: rgba(0, 210, 255, 0.15);
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: grab;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    user-select: none;
+}
+
+.window-header:active {
+    cursor: grabbing;
+}
+
+.window-title {
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.window-close {
+    background: #ff4757;
+    border: none;
+    color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.window-close:hover {
+    background: #ff6b81;
+}
+
+.window-content {
+    padding: 15px;
+    flex-grow: 1;
+    color: #ddd;
+    overflow-y: auto;
+}

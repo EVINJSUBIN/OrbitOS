@@ -1,0 +1,80 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden; /* Prevent scrolling on desktop */
+    background-color: #050510; /* Deep space dark */
+    color: white;
+}
+
+/* Space Theme Background */
+#desktop {
+    height: calc(100% - 40px); /* Leave room for taskbar */
+    width: 100%;
+    position: relative;
+    /* Nebula effect */
+    background-image: 
+        radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(0, 255, 255, 0.05) 0%, transparent 50%),
+        /* Stars background layers */
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+        radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 100% 100%, 100% 100%, 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+    background-position: 0 0, 0 0, 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+#taskbar {
+    height: 40px;
+    width: 100%;
+    background: rgba(10, 10, 30, 0.85); /* Semi-transparent dark blue */
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 255, 255, 0.3); /* Neon cyan top border */
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 0 -2px 10px rgba(0, 255, 255, 0.1);
+    z-index: 9999; /* Ensure taskbar is always on top */
+}
+
+#start-btn {
+    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 0 5px rgba(0, 210, 255, 0.5);
+}
+
+#start-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.8);
+}
+
+#start-btn:active {
+    transform: scale(0.95);
+}
+
+#taskbar-apps {
+    flex-grow: 1; /* Take up remaining space */
+    display: flex;
+    gap: 5px;
+}
+
+#clock {
+    color: #00d2ff; /* Neon cyan */
+    font-family: monospace;
+    font-size: 1.1em;
+    padding: 0 10px;
+    text-shadow: 0 0 5px rgba(0, 210, 255, 0.5);
+    user-select: none;
+}

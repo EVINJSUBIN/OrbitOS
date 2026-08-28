@@ -3,14 +3,13 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden; /* Prevent scrolling on desktop */
-    background-color: #050510; /* Deep space dark */
+    overflow: hidden;
+    background-color: #050510;
     color: white;
 }
 
-/* Space Theme Background */
 #desktop {
-    height: calc(100% - 40px); /* Leave room for taskbar */
+    height: calc(100% - 40px);
     width: 100%;
     position: relative;
     padding: 10px;
@@ -19,7 +18,6 @@ body, html {
     flex-direction: column;
     align-content: flex-start;
     flex-wrap: wrap;
-    /* Nebula effect */
     background-image: 
         radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
         radial-gradient(circle at 85% 30%, rgba(0, 255, 255, 0.05) 0%, transparent 50%),
@@ -31,7 +29,6 @@ body, html {
     background-position: 0 0, 0 0, 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
-/* Desktop Icons */
 .icon {
     width: 70px;
     height: 80px;
@@ -60,7 +57,6 @@ body, html {
     text-align: center;
 }
 
-/* Taskbar */
 #taskbar {
     height: 40px;
     width: 100%;
@@ -108,7 +104,6 @@ body, html {
     to { transform: scale(1); opacity: 1; }
 }
 
-/* Window Styles */
 .window {
     position: absolute;
     background: rgba(10, 10, 30, 0.9);
@@ -160,7 +155,6 @@ body, html {
     flex-direction: column;
 }
 
-/* App specific styles */
 #notepad-text {
     flex-grow: 1;
     resize: none;
@@ -182,7 +176,6 @@ iframe {
     flex-grow: 1;
 }
 
-/* ISS Tracker Styles */
 #iss-refresh {
     transition: background 0.2s, transform 0.1s;
 }

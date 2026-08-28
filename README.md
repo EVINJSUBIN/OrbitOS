@@ -19,6 +19,8 @@ just download the files and double click `index.html` to open it in chrome or wh
 then just double click the icons on the desktop to open the apps.
 
 ## how i built it
-i used standard HTML, CSS and Javascript. it was kinda hard to make the windows draggable and get the z-index stuff working right but i finally figured it out!
+i used standard HTML, CSS and Javascript. 
+i also used AI to help me write the tricky CSS stuff like the space background and animations, and it helped me figure out some of the javascript math for making the windows dragable!
+it was kinda hard to make the windows draggable and get the z-index stuff working right but i finally figured it out!
 
 hope u like it!!

@@ -179,4 +179,25 @@ document.getElementById('icon-notepad').addEventListener('dblclick', openNotepad
 document.getElementById('icon-browser').addEventListener('dblclick', openBrowser);
 document.getElementById('icon-isstracker').addEventListener('dblclick', openISSTracker);
 
+const startBtn = document.getElementById('start-btn');
+const startMenu = document.getElementById('start-menu');
+
+startBtn.addEventListener('click', () => {
+    if (startMenu.style.display === 'none' || startMenu.style.display === '') {
+        startMenu.style.display = 'flex';
+    } else {
+        startMenu.style.display = 'none';
+    }
+});
+
+document.addEventListener('click', (e) => {
+    if (!startBtn.contains(e.target) && !startMenu.contains(e.target)) {
+        startMenu.style.display = 'none';
+    }
+});
+
+document.getElementById('start-notepad').addEventListener('click', () => { openNotepad(); startMenu.style.display = 'none'; });
+document.getElementById('start-browser').addEventListener('click', () => { openBrowser(); startMenu.style.display = 'none'; });
+document.getElementById('start-isstracker').addEventListener('click', () => { openISSTracker(); startMenu.style.display = 'none'; });
+
 console.log("started os");

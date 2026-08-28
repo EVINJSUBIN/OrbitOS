@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OrbitOS</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div id="desktop">
-        <!-- Example Window -->
-        <div class="window" id="example-window" style="top: 100px; left: 100px;">
-            <div class="window-header">
-                <span class="window-title">Welcome App</span>
-                <button class="window-close">X</button>
-            </div>
-            <div class="window-content">
-                <p>Welcome to OrbitOS! 🌌</p>
-                <p>Try dragging me around by the title bar.</p>
-            </div>
+        <!-- Desktop Icons -->
+        <div class="icon" id="icon-notepad">
+            <div class="icon-img">📝</div>
+            <div class="icon-label">Notepad</div>
+        </div>
+        <div class="icon" id="icon-browser">
+            <div class="icon-img">🌐</div>
+            <div class="icon-label">Browser</div>
+        </div>
+        <div class="icon" id="icon-isstracker">
+            <div class="icon-img">🛰️</div>
+            <div class="icon-label">ISS Tracker</div>
         </div>
     </div>
-
-
+    
     <div id="taskbar">
         <button id="start-btn">🚀 Start</button>
         <div id="taskbar-apps"></div>
@@ -32,5 +31,4 @@
 
     <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,39 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; media-src 'self' https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-src https:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src 'self' https: wss:; worker-src 'self' blob:;" />
     <title>OrbitOS</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="desktop">
-        <div class="icon" id="icon-notepad">
-            <div class="icon-img">📝</div>
-            <div class="icon-label">Notepad</div>
-        </div>
-        <div class="icon" id="icon-browser">
-            <div class="icon-img">🌐</div>
-            <div class="icon-label">Browser</div>
-        </div>
-        <div class="icon" id="icon-isstracker">
-            <div class="icon-img">🛰️</div>
-            <div class="icon-label">ISS Tracker</div>
-        </div>
-    </div>
-    
-    <div id="start-menu" style="display: none;">
-        <div class="start-item" id="start-notepad">📝 Notepad</div>
-        <div class="start-item" id="start-browser">🌐 Browser</div>
-        <div class="start-item" id="start-isstracker">🛰️ ISS Tracker</div>
-    </div>
-    
-    <div id="taskbar">
-        <button id="start-btn">🚀 Start</button>
-        <div id="taskbar-apps"></div>
-        <div id="clock">00:00</div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

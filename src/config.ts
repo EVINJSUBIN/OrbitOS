@@ -5,5 +5,7 @@ export const mediaUrl = (path: string) => {
   if (import.meta.env.PROD && (path.startsWith('/audio/') || path.startsWith('/reels/'))) {
     return `${SUPABASE_BASE}${path}`
   }
-  return path
+  // Strip leading slash if present to safely append to BASE_URL
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path
+  return `${import.meta.env.BASE_URL}${cleanPath}`
 }
